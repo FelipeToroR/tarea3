@@ -1,0 +1,51 @@
+<body>
+	<div id="noticiasDestacadas">
+		<section id="feature-area" class="about-section">
+		  <div class="container">
+			<div class="row text-center inner">
+			  <div *ngFor="let noticia of ListaDestacadas" class="col-sm-4">
+			    <div  class="feature-content">
+				 <img *ngIf="noticia.id==1" src="/assets/img/uno.jpg" alt="Image">
+				 <img *ngIf="noticia.id==2" src="/assets/img/dos.jpg" alt="Image">
+				 <img *ngIf="noticia.id==3" src="/assets/img/tres.jpg" alt="Image">
+				 <h2 *ngIf="noticia.idCategoria==1" class="feature-content-title" style="color:rgb(37, 37, 161);">{{noticia.titulo}}</h2>
+				 <h2 *ngIf="noticia.idCategoria==2" class="feature-content-title" style="color:rgb(90, 0, 0);">{{noticia.titulo}}</h2>
+				 <h2 *ngIf="noticia.idCategoria==3" class="feature-content-title" style="color:rgb(31, 100, 31);">{{noticia.titulo}}</h2>
+				 <h2 *ngIf="noticia.idCategoria==4" class="feature-content-title" style="color:rgb(200, 14, 200);">{{noticia.titulo}}</h2>
+				 <h2 *ngIf="noticia.idCategoria==5" class="feature-content-title" style="color:rgb(2, 2, 97);">{{noticia.titulo}}</h2>
+				 <h2 *ngIf="noticia.idCategoria==6" class="feature-content-title" style="color:rgb(158, 8, 8);">{{noticia.titulo}}</h2>
+				   <p class="feature-content-description">{{noticia.texto}}</p>
+				    <a *ngIf="noticia.idCategoria==1" style="background:rgb(37, 37, 161); color:whitesmoke;" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+				    <a *ngIf="noticia.idCategoria==2" style="background:rgb(90, 0, 0); color:whitesmoke" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+					<a *ngIf="noticia.idCategoria==3" style="background:rgb(31, 100, 31); color:whitesmoke" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+					<a *ngIf="noticia.idCategoria==4" style="background:rgb(200, 14, 200); color:whitesmoke" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+					<a *ngIf="noticia.idCategoria==5" style="background:rgb(2, 2, 97); color:whitesmoke" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+					<a *ngIf="noticia.idCategoria==6" style="background:rgb(158, 8, 8); color:whitesmoke" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+				</div>
+			  </div>
+		    </div>
+	      </div>
+		</section>
+	</div>
+		<div id="noticiasNormales">
+			<section id="testimornial-area">
+				<div class="container">
+				  <div class="row text-center">
+					<div *ngFor="let noticia of ListaNoticias" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+					  <div class="testimonial-content">
+						<img *ngIf="noticia.id==11" src="/assets/img/cuatro.jpg" alt="Image">
+						<img *ngIf="noticia.id==12" src="/assets/img/cinco.jpg" alt="Image">
+						<img *ngIf="noticia.id==13" src="/assets/img/seis.jpg" alt="Image">
+						<img *ngIf="noticia.id==14" src="/assets/img/siete.jpg" alt="Image">
+						<img *ngIf="noticia.id==15" src="/assets/img/ocho.jpg" alt="Image">
+						<img *ngIf="noticia.id==16" src="/assets/img/nueve.jpg" alt="Image">
+						<h2>{{noticia.titulo}}</h2>	<p>{{noticia.texto}}</p>
+						 <a [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" class="content-link">Leer Más</a>
+						 <p id="dets"></p>
+				    </div>
+			      </div>
+			    </div>
+			  </div>
+		    </section>
+		</div>
+</body>
